@@ -1,0 +1,1 @@
+// Javascript Teil unserer Aufgabe
