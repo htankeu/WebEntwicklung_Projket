@@ -1,1 +1,114 @@
-/* CSS Teil userer Aufgabe*/
+/* font-family poppins importieren */
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "sans-serif";
+    box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border:none;
+}
+
+a i{
+    font-size: 3.2em;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior: smooth;
+}
+
+body{
+    position: relative;
+}
+
+header{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    height: 80px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 8px;
+    font-weight: bold;
+}
+.logo span{
+    color: red;
+}
+
+.search{
+    display: flex;
+    
+}
+
+#searchfield-header-input{
+    display: flex;
+    width: 100%;
+    line-height: 1.6;
+    height: 5.2rem;
+    color: #19161699;
+    background-color: #fff;
+    border-width: 1px 0px 1px 1px;
+    border-top: solid #9d9292;
+    border-bottom: solid #9d9292;
+    border-left: solid #9d9292;
+    border-radius: 5px 0px 0px 5px;
+    padding: 1.2rem 1.2rem;
+    
+}
+.search .button_reset_search{
+    border-width: 1px 0px 1px 1px;
+    border-top: solid #9d9292;
+    border-bottom: solid #9d9292;
+    padding: 1.2rem 1.6rem;
+}
+.button_search{
+    border-width: 1px 0px 1px 1px;
+    /* border-right: 1px solid; */
+    border-top: solid transparent;
+    border-bottom: solid transparent;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgb(222, 18, 18);
+    padding: 1.2rem 1.6rem;
+}
+
+.class{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #7b7474;
+}
+
+.choose_circle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose_circle span.circle{
+    background-color: #b9b6b6;
+    color: #4a4545;
+    position: relative;
+    text-align: center;
+    top: 12px;
+    right:12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
