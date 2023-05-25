@@ -20,9 +20,9 @@
         <div class="search_platz">
             <form data-testid="header-search-form" class="search_header">
                 <span class="search">
-                    <input type="text"  id="searchfield-header-input" placeholder="Stichwort/ Artikelnummer">
+                    <input type="text"  id="searchfield-header-input" placeholder="Stichwort/Artikelnummer">
                     <button type="reset" class="button_reset_search"><div><i class="fa-sharp fa-solid fa-xmark"></i></div></button>
-                    <button class="button_search"><div><i class="fa-solid fa-magnifying-glass"></i></div></button>
+                    <button class="button_search" type="button"><div><i class="fa-solid fa-magnifying-glass"></i></div></button>
                 </span>
             </form>
         </div>
@@ -30,14 +30,14 @@
         <div class="user">
             <a href="#" class="class kunde">
                 <i class="fa-solid fa-user"></i>             
-                <span>Kunde</span>
+                <span class="te">Kunde</span>
             </a>
         </div>
 
         <div class="schein">
             <a href="#" class="class bestellschein">
                 <i class="fa-solid fa-receipt"></i>
-                <span>Bestellschein</span>
+                <span class="te">Bestellschein</span>
             </a>
         </div>
 
@@ -46,7 +46,7 @@
                 <div class="choose_circle">
                     <i class="fa-sharp fa-solid fa-heart"></i><span class="circle">0</span>
                 </div>
-                <span>Merkzettel</span>
+                <span class="te">Merkzettel</span>
             </a>
         </div>
 
@@ -55,11 +55,11 @@
                 <div class="choose_circle">
                     <i class="fa-sharp fa-solid fa-bag-shopping"></i><span class="circle">0</span>
                 </div>
-                <span>Warenkorb</span>
+                <span class="te">Warenkorb</span>
             </a>
         </div>
     </header>
-
+    <!-- fin header -->
 
 
 
@@ -68,6 +68,110 @@
 
     <!-- footer -->
     <footer>
+        <!-- obere row -->
+        <div class="top">
+            <!-- first column -->
+            <div class="col first">
+                <div class="logo">
+                    <h1>Build<span>Car</span></h1>
+                </div>
+
+                <div class="user_ort">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>  <span class="ort">Germany</span>
+                </div>
+
+                <ul class="list firstCol">
+                    <li><a href="#">Gutscheinkarten</a></li>
+                    <li><a href="#">CARS Kataloge</a></li>
+                    <li><a href="#">Offiziellen <span>BUILDCAR</span> Store finden</a></li>
+                </ul>
+            </div>
+            <!-- second column -->
+            <div class="col second">
+                <div class="title"><h1>über uns</h1></div>
+                <ul class="list secondCol">
+                    <li><a href="#">Über die <span>BUILDCAR</span> Gruppe</a></li>
+                    <li><a href="#">BUILDCAR News</a></li>
+                    <li><a href="#">Lieferkettentransparenz</a></li>
+                    <li><a href="#">Jobs bei der <span>BUILDCAR</span> Gruppe</a></li>
+                </ul>
+            </div>
+            <!-- third column -->
+            <div class="col third">
+                <div class="title"><h1>support</h1></div>
+                <ul class="list thirdCol">
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Bauanleitungen</a></li>
+                    <li><a href="#">Fehlende Teile</a></li>
+                    <li><a href="#">Lieferung und Rückgabe</a></li>
+                    <li><a href="#">Impressum</a></li>
+                </ul>
+            </div>
+            <!-- 4th column -->
+            <div class="col fourth">
+                <div class="title"><h1>ATTRAKTONEN</h1></div>
+                <ul class="list thirdCol">
+                    <li><a href="#"><span>BUILDCAR</span> HOUSE</a></li>
+                    <li><a href="#"><span>BUILDCARLAND</span> Parks</a></li>
+                </ul>
+            </div>
+            <!-- 5. column -->
+            <div class="col fiveth">
+                <div class="title"><h1>mehr über uns</h1></div>
+                <ul class="list thirdCol">
+                    <li><a href="#"><span>BUILDCAR</span> LIFE</a></li>
+                    <li><a href="#"><span>BUILDCARLAND</span> Education</a></li>
+                    <li><a href="#"><span>BUILDCARLAND</span> Ideas</a></li>
+                    <li><a href="#"><span>BUILDCARLAND</span> Foundation</a></li>
+                    <li><a href="#">Verbundprogramm</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- mittlere row -->
+        <div class="mittel">
+            <!-- marketing e-mail abonnement -->
+            <div class="marketing_mail_abo">
+                <h1>marketing-e-mails abonnieren</h1>
+                <form data-testid="email-abonnieren" class="abo_email">
+                    <span class="abo-mail">
+                        <input type="text"  id="email_abo_input" placeholder="Deine E-Mail-Adresse">
+                        <button class="button_validate" type="button"><div><i class="fa-solid fa-chevron-right"></i></div></button>
+                    </span>
+                </form>
+            </div>
+
+            <!-- social media div -->
+            <div class="social_media">
+                <h1>folge uns</h1>
+                <ul class="list_media">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></i></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></i></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- letzte Elemente der Footer -->
+        <div class="bottom_footer">
+            <!-- div von Utilitäten -->
+            <div class="utitaet">
+                <ul class="list_utili">
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Rechtliche Hinweise</a></li>
+                    <li><a href="#">Nutzungsbedingungen</a></li>
+                    <li><a href="#">Barrierefreiheit</a></li>
+                    <li><a href="#">Cookie-Einstellungen</a></li>
+                </ul>
+            </div>
+            <!-- div copyright -->
+            <div class="copyright">
+                <p><i class="fa-sharp fa-solid fa-copyright"></i>2023 The <span>BUILDCAR</span> Group. Alle Rechte vorbehalten. Durch die Verwendung dieser Webseite stimmen Sie den Nutzungsbedingungen zu.</p>
+            </div>
+        </div>
 
     </footer>
     
