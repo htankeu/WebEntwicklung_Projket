@@ -269,3 +269,89 @@ footer .bottom_footer li a:hover{
 ::-webkit-scrollbar-track-piece{
     background-color: black;
 }
+/* End Scrollbar */
+
+
+/* css body section#home*/
+#home{
+    margin-top: 50px;
+    height: calc(100vh - 50px);
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+#home .right{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#home .right .images{
+    display: flex;
+    flex-direction: row;
+    animation-duration: 10s;
+    animation-name: defilementImages;
+    animation-iteration-count: infinite;
+}
+#home .right img{
+    width: 100%;
+}
+
+#home .left{
+    width: 40%;
+}
+#home .left h1{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+#home .left h1 span{
+    color:rgb(222, 18, 18);
+}
+#home .left p{
+    margin-bottom: 30px;
+    color:#999;
+    font-family: 13px;
+}
+#home .left a{
+    background-color: black;
+    padding: 10px 20px;
+    font-size: 14px;
+    color:#fff;
+    transition: 0.5s;
+}
+#home .left a:hover{
+    background-color: rgb(222, 18, 18);
+}
+
+
+
+
+
+
+
+@keyframes defilementImages{
+    0%{
+        transform: translateX(0);
+    }
+    16.67%{
+        transform: translateX(-684px);
+    }
+    33.34%{
+        transform: translateX(-1348px);
+    }
+    50.01%{
+        transform: translateX(-2042px);
+    }
+    66.68%{
+        transform: translateX(-2806px);
+    }
+    83.35%{
+        transform: translateX(-3406px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
