@@ -148,7 +148,7 @@ footer .top{
 
 
 footer .logo{
-    width: 62%;
+    width: 79%;
     margin-bottom: 10px;
 }
 footer .user_ort{
@@ -254,4 +254,18 @@ footer .bottom_footer li a{
 }
 footer .bottom_footer li a:hover{
     text-decoration: underline;
+}
+/* End footer */
+
+
+/* Scrollbar CSS */
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(222, 18, 18);
+}
+::-webkit-scrollbar-track-piece{
+    background-color: black;
 }
