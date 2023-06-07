@@ -11,3 +11,4 @@ function openMenu(){
 function closeMenu(){
     sidemenu.style.right = "-200px";
 }
+

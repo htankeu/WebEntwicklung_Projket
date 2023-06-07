@@ -1,6 +1,12 @@
 /* font-family poppins importieren */
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
+
+:root{
+    --primary :rgb(72, 222, 18);
+    --secondray:#000;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -59,7 +65,7 @@ header .fa-bars{
     align-items: flex-end;
 }
 header ul{
-    background:rgb(222, 18, 18);
+    background:var(--primary);
     position: fixed;
     top: 0;
     right: -200px;
@@ -88,10 +94,10 @@ header ul .fa-xmark{
     color: #fff;
     background-color: #000;
     padding: 5px 8px;
-    font-weight: bold;
+    font-style: italic;
 }
 .logo span{
-    color: red;
+    color: var(--primary);
 }
 
 .search{
@@ -220,6 +226,7 @@ footer .list a{
     color: #fff;
     transition: 0.2s;
 }
+
 footer .list a:hover{
     text-decoration: underline;
 }
@@ -327,63 +334,177 @@ footer .copyright{
 }
 /* End Scrollbar */
 
+
+
 section{
+    display: grid;
+    align-items: center;
+    position: relative;
+    justify-content: center;
     margin-bottom: 50px;
+    height: auto;
+    min-width: 375px;
+    padding: 0 8%;
 }
 /* css body section#home*/
 #home{
     margin-top: 50px;
-    height: 667px;
-    min-width: 375px;
-    padding: 0 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
 }
-#home .right{
-    width:50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-#home .right .images{
-    display: flex;
-    flex-direction: row;
-    animation-duration: 10s;
-    animation-name: defilementImages;
+
+#home .werbung{
+    grid-row: 1;
+    /* background-size: 400px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("images_defilements/house-g39d46c916_1280.jpg");
+    background-position: center;
+    height:200px;
+    margin-bottom: 50px;
+
+
+    -webkit-animation-name: diapo;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+
+    -moz-animation-name: diapo;
+    -moz-animation-duration: 9s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+
+    animation-name: diapo;
+    animation-duration: 9s;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-direction: normal;
 }
-#home .right img{
+
+#home .werbung p{
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 10px;
+}
+#home .werbung p span{
+    font-style: italic;
+}
+
+
+
+#home .beschreib{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color:#fff;
+}
+#home .beschreib .left{
+    grid-row: 2;
+    background-image: url("images/meadow-g977fbba76_1280.jpg");
+    background-size: cover;
+}
+#home .beschreib .left p{
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+#home .beschreib .left h1{
+    font-size: 19px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#home .beschreib .left p:last-child{
+    font-weight: bold;
+}
+
+#home .beschreib .right{
+    grid-row: 1;
+    background-image: url("images/soocer-removebg-preview.png");
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home .beschreib .right img{
     width: 100%;
 }
 
-#home .left{
-    width: 40%;
-}
-#home .left h1{
+
+/* section build */
+.section_title{
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
-#home .left h1 span{
-    color:rgb(222, 18, 18);
+.section_title::before{
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    content: "";
+    background-image: url("images/meadow-g977fbba76_1280.jpg");
+    background-size: cover;
+    width: 20%;
+    height: 5px;
+    border-radius: 6px;
 }
-#home .left p{
-    margin-bottom: 30px;
-    color:#999;
-    font-family: 13px;
+.section_title::after{
+    position: absolute;
+    top:0;
+    left: 180px;
+    content: "";
+    background-image: url("images/meadow-g977fbba76_1280.jpg");
+    background-size: cover;
+    width: 20%;
+    height: 5px;
+    border-radius: 6px;
 }
-#home .left a{
-    background-color: black;
-    padding: 5px 10px;
-    font-size: 10px;
-    color:#fff;
-    transition: 0.5s;
+
+#build .bau{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
 }
-#home .left a:hover{
-    background-color: rgb(222, 18, 18);
+#build .bau figure{
+    display: grid;
+    grid-template-columns: 2;
+    background-color: #efebeb; 
+    border-radius: 15px;   
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin:20px;
+    cursor: pointer;
 }
+#build .bau figure img{
+    grid-column: 1;
+    width: 70%;
+}
+#build .bau figure .neu{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+#build .bau figure .neu figcaption{
+    grid-row: 1;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+#build .bau figure .neu i{
+    grid-row: 2;
+    font-size: 15px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    padding:15px 15px;
+    background-color: #eda73f;
+    color:#fff
+}
+
 
 
 
@@ -413,6 +534,24 @@ section{
     100%{
         transform: translateX(0px);
     }
+}
+
+@-webkit-keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://media.istockphoto.com/id/1199866137/de/foto/bunte-sportteam-shirts-h%C3%A4ngen-an-kleiderschienen.jpg?s=2048x2048&w=is&k=20&c=4sMFBaIyf_M8xQfrK4OCxSdA6bsB5g5HzYoIslwlhew=");}
+    66%{background-image: url("https://media.istockphoto.com/id/984746818/de/foto/fu%C3%9Fball-flach-zu-legen.jpg?s=2048x2048&w=is&k=20&c=6zsHMXIMCxiltNkzhZ8Pc6whECZ-vunNANfO0tHEQP0=");}
+}
+
+@-moz-keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://media.istockphoto.com/id/1199866137/de/foto/bunte-sportteam-shirts-h%C3%A4ngen-an-kleiderschienen.jpg?s=2048x2048&w=is&k=20&c=4sMFBaIyf_M8xQfrK4OCxSdA6bsB5g5HzYoIslwlhew=");}
+    66%{background-image: url("https://media.istockphoto.com/id/984746818/de/foto/fu%C3%9Fball-flach-zu-legen.jpg?s=2048x2048&w=is&k=20&c=6zsHMXIMCxiltNkzhZ8Pc6whECZ-vunNANfO0tHEQP0=")}
+}
+
+@keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://media.istockphoto.com/id/1199866137/de/foto/bunte-sportteam-shirts-h%C3%A4ngen-an-kleiderschienen.jpg?s=2048x2048&w=is&k=20&c=4sMFBaIyf_M8xQfrK4OCxSdA6bsB5g5HzYoIslwlhew=");}
+    66%{background-image: url("https://media.istockphoto.com/id/984746818/de/foto/fu%C3%9Fball-flach-zu-legen.jpg?s=2048x2048&w=is&k=20&c=6zsHMXIMCxiltNkzhZ8Pc6whECZ-vunNANfO0tHEQP0=");}
 }
 
 
@@ -596,6 +735,21 @@ section{
         margin: 0px;
     }
     
+    section{
+        margin-bottom: 150px;
+    }
+
+    .section_title::before{
+        left: 280px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    .section_title::after{
+        left: 380px;
+        width: 10%;
+        height: 5px;
+    }
     
 
     .class{
@@ -613,12 +767,114 @@ section{
         margin-top: 7px;
         visibility: visible;
     }
+
+    #home .ganz_werbung{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 50px;
+        margin-bottom: 70px;
+        gap: 10px;
+    }
+    #home .left_werbung{
+        grid-column: 1;
+        background-image: url("images/rabatt-removebg-preview.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #home .werbung{
+        grid-column: 2/4;
+        min-height: 100%;
+    }
+
+    #home .werbung p{
+        top: 180px;
+    }
+
+    #home .beschreib{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        color:#fff;
+        height: 500px;
+        
+    }
+    #home .beschreib .left{
+        grid-row: 1/2;
+        grid-column: 1;
+        padding: 10% 10%;
+    }
+    #home .beschreib .left p{
+        font-size: 19px;
+    }
+    #home .beschreib .left h1{
+        font-size: 25px;
+    }
+
+    #home .beschreib .right{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    #home .beschreib .right{
+        background-size: 500px;
+    }
+
+
+    #build .bau{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #build .bau figure{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2;
+        margin:20px;
+        width: 200px;
+        height: 350px;
+        align-items: center;
+        text-align: center;
+    }
+    #build .bau figure img{
+        grid-row: 1/1;
+        grid-column: 2/2;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #build .bau figure .neu{
+        grid-row: 2/2;
+        grid-column: 2/2;
+        padding: 0px 0px;
+    }
+    #build .bau figure .neu figcaption{
+        grid-row: 1;
+        font-size: 15px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 50px;
+    }
+    #build .bau figure .neu i{
+        grid-row: 2;
+        font-size: 15px;
+        border:1px solid #fff;
+        border-radius: 50%;
+        padding:15px 15px;
+        background-color: #eda73f;
+        color:#fff
+    }
+    
 }
+
+
+
 
 @media (min-width:1000px){
     header .logo,.elList,.search_platz{
         margin-right: 95px;
     }
+
+    
 }
 
 @media (min-width:1500px){
