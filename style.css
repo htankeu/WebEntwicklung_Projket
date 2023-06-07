@@ -505,6 +505,43 @@ section{
     color:#fff
 }
 
+/* css section fragen */
+
+#Fragen{
+    position: relative;
+}
+#Fragen .config{
+    transition: 0.5s ease;
+}
+#Fragen .fragen{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+}
+
+#Fragen .fragen span{
+    font-size: 18px;
+}
+#Fragen .fragen span i{
+    color: #4a4545;
+}
+
+.fragen > span{
+    text-align: left;
+    font-weight: bold;
+    /* margin-left: 15px; */
+}
+#Fragen .textvon p{
+    visibility: hidden;
+}
+#Fragen .textvon,.imagesvon{
+    text-align: center;
+    align-items: center;
+    height: 0px;
+    padding: 15px;
+}
+
 
 
 
