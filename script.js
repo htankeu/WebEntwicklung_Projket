@@ -54,7 +54,7 @@ function pulldownFrage (place,parent){
         if(istChild(parent,elem)) chevron = elem
     }
 
-    chevron.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
+    chevron.style.transform = "rotate(0deg)"
 
     if(saw %2 == 0){
         place.style.height = "150px"
@@ -62,7 +62,7 @@ function pulldownFrage (place,parent){
         
         if(istChild(place,answeConfig[0])) answeConfig[0].style.visibility = "visible"
 
-        chevron.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'
+        chevron.style.transform = "rotate(180deg)"
         
     }
     saw+=1

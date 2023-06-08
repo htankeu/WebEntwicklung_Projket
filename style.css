@@ -32,6 +32,7 @@ body{
     position: relative;
     /* min-width: 375px;
     min-height: 100vh; */
+    overflow-x: hidden;
 }
 
 header{
@@ -569,8 +570,65 @@ section{
 }
 
 
+/* zahl der Bestellungen css */
+
+#bestellungen_zahl .box{
+    position: relative;
+    color:#130355;
+    cursor: pointer;
+    transition:transfor 0.5s cubic-bezier(0.23,1.83,0.42,1.19); 
+
+}
+#bestellungen_zahl .box:hover{
+    transform: scale(1.2);
+}
+#bestellungen_zahl .box p{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#bestellungen_zahl .circlebox{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: transparent;
+    border: 3px solid #f1f1f1;
+    animation: 1s linear infinite alternate magicBox,
+                4s linear infinite spinning;
+    padding-top: 340px;
+}
 
 
+
+@keyframes magicBox{
+    from{
+        box-shadow:
+        0 0 0 #feac5e,
+        0 0 0 #c779d0,
+        0 0 0 #4bc0c8,
+        0 0 0 #42db75;
+    }
+    to{
+        box-shadow:
+        0 -10px 0 #feac5e,
+        -10px 0 0 #c779d0,
+        0 10px 0 #4bc0c8,
+        10px 0 0 #42db75;
+    }
+}
+
+@keyframes spinning{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
 
 
@@ -945,6 +1003,17 @@ section{
     #Fragen .imagesvon img{
         width: 10%;
         height: 50%;
+    }
+
+    #bestellungen_zahl .box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #bestellungen_zahl .circlebox{
+        grid-column: 3;
+    }
+    #bestellungen_zahl .box p{
+        grid-column: 3;
     }
     
 }
