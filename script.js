@@ -16,16 +16,29 @@ function closeMenu(){
 // script to frage
 const chevrons = document.getElementsByClassName('icon-chevron')    //all icon chevron in each Div
 
+
 const configDiv = document.querySelector('.config')
 const divAnswerConfig = document.querySelector('.textvon')
 const answeConfig = divAnswerConfig.getElementsByTagName('p')
 
-chevrons.innerHtml
+const bestSelDiv = document.querySelector('.best')
+const divImageBest = document.querySelector('.BestSeller')
+
+const materialDiv = document.querySelector('.Material')
+const divImageMaterial = document.querySelector('.Materiallen')
 
 
 
 configDiv.addEventListener('click',()=>{
     pulldownFrage(divAnswerConfig,configDiv)
+})
+
+bestSelDiv.addEventListener('click',()=>{
+    pulldownFrage(divImageBest,bestSelDiv)
+})
+
+materialDiv.addEventListener('click',()=>{
+    pulldownFrage(divImageMaterial,materialDiv)
 })
 
 
@@ -41,14 +54,16 @@ function pulldownFrage (place,parent){
         if(istChild(parent,elem)) chevron = elem
     }
 
-    chevron.innerHtml = '<i class="fa-solid fa-chevron-down"></i>'
+    chevron.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
 
     if(saw %2 == 0){
         place.style.height = "150px"
         
-        if(istChild(place,answeConfig[0])) answeConfig[0].style.visibility = "visible"
         
-        chevron.innerHtml = '<i class="fa-solid fa-chevron-up"></i>'
+        if(istChild(place,answeConfig[0])) answeConfig[0].style.visibility = "visible"
+
+        chevron.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'
+        
     }
     saw+=1
 }
