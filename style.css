@@ -602,6 +602,49 @@ section{
     padding-top: 340px;
 }
 
+/* css to have a build page */
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;left: 0;right: 0;
+    background: rgba(0,0, 0, 0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+}
+
+.popup{
+    margin: 6rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup .cross{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s ease;
+    color: #333;
+}
+
+.popup .cross:hover{
+    color: #12fcf8;
+}
+
+
 
 
 @keyframes magicBox{
