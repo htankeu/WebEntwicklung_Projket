@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,29 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap-apis für die Nutzung von Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
     <!-- header -->
     <header>
         <div class="logo">
-                <h1>Build<span>House</span></h1>
+            <h1>Build<span>House</span></h1>
         </div>
 
         <div class="search_platz">
             <form data-testid="header-search-form" class="search_header">
                 <span class="search">
-                    <input type="text"  id="searchfield-header-input" placeholder="Stichwort/Artikelnummer">
-                    <button type="reset" class="button_reset_search"><div><i class="fa-sharp fa-solid fa-xmark"></i></div></button>
-                    <button class="button_search" type="button"><div><i class="fa-solid fa-magnifying-glass"></i></div></button>
+                    <input type="text" id="searchfield-header-input" placeholder="Stichwort/Artikelnummer">
+                    <button type="reset" class="button_reset_search">
+                        <div><i class="fa-sharp fa-solid fa-xmark"></i></div>
+                    </button>
+                    <button class="button_search" type="button">
+                        <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </button>
                 </span>
             </form>
         </div>
@@ -32,18 +40,18 @@
                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 <li class="user">
                     <a href="#" class="class kunde">
-                        <i class="fa-solid fa-user"></i>             
+                        <i class="fa-solid fa-user"></i>
                         <span class="te">Kunde</span>
                     </a>
                 </li>
-    
+
                 <li class="schein">
                     <a href="#" class="class bestellschein">
                         <i class="fa-solid fa-receipt"></i>
                         <span class="te">Bestellschein</span>
                     </a>
                 </li>
-    
+
                 <li class="merk">
                     <a href="#" class="class merkzettel">
                         <div class="choose_circle">
@@ -52,7 +60,7 @@
                         <span class="te">Merkzettel</span>
                     </a>
                 </li>
-    
+
                 <li class="korb">
                     <a href="#" class="class warenkorb">
                         <div class="choose_circle">
@@ -61,36 +69,43 @@
                         <span class="te">Warenkorb</span>
                     </a>
                 </li>
-                
+
             </ul>
-            
+
             <i class="fa-solid fa-bars" onclick="openMenu()"></i>
         </div>
-        
-        
+
+
     </header>
     <!-- fin header -->
 
 
 
     <!-- Anfang Inhalt -->
-    <section id="home">
-        <div class="left">
-            <h1>Buy a parts of <span>Your House</span> Cheaper from Us</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit illum molestiae, libero quam dignissimos iure, repudiandae natus quidem quis itaque repellendus quos hic dolores? Assumenda quidem nemo quam blanditiis sed.</p>
-            <a href="aniprodukt.html">BUY NOW</a>
+    <section id="container">
+        <div class="heading">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
         </div>
-
-        <div class="right">
-            <div class="auto_caroussel">
-                <div class="images carousseld">
-                    <img src="images_defilements/puzzle-pieces-g2fd1b96d3_1280.jpg" alt="image1">
-                    <img src="images_defilements/house-g39d46c916_1280.jpg" alt="image2">
-                    <img src="images_defilements/house-keys-g3e9955bac_1280.jpg" alt="image3">
-                    <img src="images_defilements/real-estate-g29c228219_1280.png" alt="image4">
-                    <img src="images_defilements/real-estate-g58dddb515_1280.jpg" alt="image5">
-                    <img src="images_defilements/realtor-g87e7c437a_1280.png" alt="image6">
-                </div>
+        <div class="stellung"><span class="text">Nur das Beste ist <br>gut genug </span></div>
+    </section>
+    <section class="hero">
+        <div class="heading">
+            <h1>About Us</h1>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2>Die Baumeister von morgen inspirieren und entwickeln</h2>
+                <p>Entdecken Sie die neuesten Trends und Innovationen in Technologie, Design und mehr.
+                Unser Expertenteam bietet Ihnen die besten Inhalte und Einblicke, damit Sie
+                der Zeit voraus zu sein.</p>
+                    <button class="cta-button">Learn More</button>
+            </div>
+            <div class="hero-image">
+                <img src="carrosserie/ab.jpg" alt="lego ueber uns">
             </div>
         </div>
     </section>
@@ -111,7 +126,7 @@
                 </div>
 
                 <div class="user_ort">
-                    <i class="fa-sharp fa-solid fa-location-dot"></i>  <span class="ort">Germany</span>
+                    <i class="fa-sharp fa-solid fa-location-dot"></i> <span class="ort">Germany</span>
                 </div>
 
                 <ul class="list firstCol">
@@ -122,7 +137,9 @@
             </div>
             <!-- second column -->
             <div class="col second">
-                <div class="title"><h1>über uns</h1></div>
+                <div class="title">
+                    <h1>über uns</h1>
+                </div>
                 <ul class="list secondCol">
                     <li><a href="UeberUns.html">Über die <span>BUILDCAR</span> Gruppe</a></li>
                     <li><a href="#">BUILDCAR News</a></li>
@@ -132,7 +149,9 @@
             </div>
             <!-- third column -->
             <div class="col third">
-                <div class="title"><h1>support</h1></div>
+                <div class="title">
+                    <h1>support</h1>
+                </div>
                 <ul class="list thirdCol">
                     <li><a href="#">Kontakt</a></li>
                     <li><a href="#">Bauanleitungen</a></li>
@@ -143,7 +162,9 @@
             </div>
             <!-- 4th column -->
             <div class="col fourth">
-                <div class="title"><h1>ATTRAKTONEN</h1></div>
+                <div class="title">
+                    <h1>ATTRAKTONEN</h1>
+                </div>
                 <ul class="list thirdCol">
                     <li><a href="#"><span>BUILDCAR</span> HOUSE</a></li>
                     <li><a href="#"><span>BUILDCARLAND</span> Parks</a></li>
@@ -151,7 +172,9 @@
             </div>
             <!-- 5. column -->
             <div class="col fiveth">
-                <div class="title"><h1>mehr über uns</h1></div>
+                <div class="title">
+                    <h1>mehr über uns</h1>
+                </div>
                 <ul class="list thirdCol">
                     <li><a href="#"><span>BUILDHOUSE</span> LIFE</a></li>
                     <li><a href="#"><span>BUILDHOUSELAND</span> Education</a></li>
@@ -170,8 +193,10 @@
                 <h1>marketing-e-mails abonnieren</h1>
                 <form data-testid="email-abonnieren" class="abo_email">
                     <span class="abo-mail">
-                        <input type="text"  id="email_abo_input" placeholder="Deine E-Mail-Adresse">
-                        <button class="button_validate" type="button"><div><i class="fa-solid fa-chevron-right"></i></div></button>
+                        <input type="text" id="email_abo_input" placeholder="Deine E-Mail-Adresse">
+                        <button class="button_validate" type="button">
+                            <div><i class="fa-solid fa-chevron-right"></i></div>
+                        </button>
                     </span>
                 </form>
             </div>
@@ -203,12 +228,14 @@
             </div>
             <!-- div copyright -->
             <div class="copyright">
-                <p><i class="fa-sharp fa-solid fa-copyright"></i>2023 The <span>BUILDHOUSE</span> Group. Alle Rechte vorbehalten. Durch die Verwendung dieser Webseite stimmen Sie den Nutzungsbedingungen zu.</p>
+                <p><i class="fa-sharp fa-solid fa-copyright"></i>2023 The <span>BUILDHOUSE</span> Group. Alle Rechte
+                    vorbehalten. Durch die Verwendung dieser Webseite stimmen Sie den Nutzungsbedingungen zu.</p>
             </div>
         </div>
 
     </footer>
-    
+
 </body>
 <script src="script.js"></script>
+
 </html>

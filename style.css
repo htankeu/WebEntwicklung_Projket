@@ -33,7 +33,7 @@ header{
     left: 0;
     right: 0;
     z-index: 20;
-    background-color: #fff;
+    background-color: #e57070;
     display: flex;
     align-items: center;
     /* justify-content: space-between; */
@@ -168,7 +168,15 @@ header a.class:hover{
     border-radius: 50%;
     padding:1px 5px;
 }
-
+/* habe ich wegen js code hinzugefügt---------------------*/
+.choose_circle span.cart::after{
+    content: attr(data-count);
+    opacity: 0;
+}
+.choose_circle span.cart.on::after{
+    opacity: 1;
+}
+/*-----------------------------------------------------*/
 
 
 /* footer css */
@@ -385,11 +393,446 @@ section{
     background-color: rgb(222, 18, 18);
 }
 
+#container .heading{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex: 1;
+    background-color:#fff;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+    
+}
+#container .stellung{
+    background: url("https://www.lego.com/cdn/cs/aboutus/assets/blt428815fcab383532/only-the-best-is-good-enough.jpg?disable=upscale&width=3200&quality=55&crop=16:9");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    text-align: center;
+}
+#container .stellung .text{
+    font-size: 50px;
+}
+.hero{
+    background-color: #f8f8f8;
+    margin: 0px;
+    overflow: hidden;
+    
+}
+.heading h1{
+    color: #ff6347;
+    font-size: 45px;
+    text-align: center;
+    margin: 30px;
+}
+.hero .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 40px;
+    width: 90%;
+    margin: 65px auto;
+}
+.hero-content{
+    flex:1;
+    width: 600px;
+    margin: auto;
+}
+.hero-container h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+}
+.hero-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666;
+}
+.hero-content button{
+    display: inline-block;
+    background-color: #ff4500;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.hero-content button:hover{
+    background-color: #ff6347;
+    transform: scale(1.1);
+}
+.hero-image{
+    width: 100%;
+    margin: auto;
+    filter: blur(1px);
+}
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: fadeInRight 2s ease;
+}
+
+.page-content-wrapper{
+    display: grid;
+    grid-gap: 10px;
+    margin: 10px;
+    grid-template-columns: 1fr 3fr;
+
+}
+.ordner{
+    grid-gap: 20px;
+}
+.spezikation h1 span{
+    font-size: 10px;
+    border: 1px solid #171313;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: normal; /*enlever le texte en gras*/
+}
+.spinBox1, 
+.spinBox2{
+    border: 1px solid black;
+    font-size: 8px;
+    padding: 0px 8px;
+    height: 4vh;
+    width: 13em;
+    margin: 1px;
+}
+.ordner .spezikation{
+    display: grid;
+    grid-template-areas: "h1    select1 select2";
+    
+}
+.ordner .spezifikation h1{
+    grid-area: h1;
+}
+.ordner .spezifikation .spinBox1 {
+    grid-area: select1;
+}
+.ordner .spezifikation .spinBox2 {
+    grid-area: select2;
+}
+.artikel ul{
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 10px;
+
+}
+.artikel ul li{
+    display: inline-block;
+    width: 49%;
+    /*height: 300px;*/
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.artikel .Nr{
+    background-color: rgba(155, 155, 155, 0.4);
+    z-index: 1;
+}
+.artikel .Nr{
+    /*position: absolute;*/
+    /*width: 100%;*/
+    height: auto;
+    transition: height 0.5s ease;
+}
+.heart .like-conta{
+    /*top: 0;
+    right: 0;
+    margin-top: 0px;*/
+    z-index: 2;         /*herz auf dem img anhängen -------klapt nicht*/
+    
+    /*background-color: blue;*/
+}
+.like .fa-sharp {
+    color: rgb(101, 96, 96);
+    
+}
+.like .heart-icon.clicked {
+    color: red;
+    
+}
+
+.like .heart-icon:hover {
+        /* ❤️sprung vorne machen😅 */
+        transform: scale(-1.5);
+}
+
+.artikel .like-conta .like img{
+    align-items: center;
+}
+.describ-contain .but-ware{       /*Button "Warenkorb zentrieren*/
+    width: 100%;            /* die ganze Breite bezizen------klapt nicht*/
+    text-align : center;
+}
+.describ-contain button{
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.größe,
+.but-ware {
+/*position: absolute;
+    bottom: 0;
+    left: 0;*/
+    visibility: hidden;         /*keine anzeige aber pletz dafür siehbar != display*/
+    opacity: 0;
+    margin-top: 10px;
+    transform: translateY(100%);    /*klassen nach hinten schieben*/
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+li:hover .größe,
+li:hover .but-ware {
+    visibility: visible;
+        opacity: 1;
+        transform: translateY(0); /**/
+        /* Décalage vers le haut (0 signifie aucune translation) */
+}
+
+/*---------------Start-style von aniprodukt-html----------------------------------------*/
+.ordnen{
+    text-align: right;
+    margin-right: 30px;
+}
+main {
+    width: 100%;
+    height: auto;
+    padding: 10px 8%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+main .item{
+    flex: 1;        /*sodass das Element innerhalb eines flexiblen Containers je nach Bedarf wachsen oder schrumpfen kann.*/
+    min-width: 45%;             /*-------modifiy------*/
+    height: 350px;              /*-------modifiy------*/
+    background: rgb(206, 175, 175);
+    padding: 5px;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+main .item:hover{
+    height: 350px;              /*-------modifiy------*/
+}
+.item:hover .dat{
+    padding: 1px 2px 2px 10px;       /*-------modifiy------*/
+    height: 175px;          /*-------modifiy------*/
+}
+.item:hover img {
+    transform: scale(0.8);      /*das Bild auf 80% seiner ursprünglichen Größe verkleinert wird: Zoom-Effekt bei Überfahren mit dem Maus*/
+}
+.item img{
+    width: 100%;
+    margin: auto;
+    transition: inherit;        /*veerbung: wert von item(the Parent) wird hier angewendet: inherit*/
+    transform: scale(0.9);      
+}
+.item .dat{
+    width: 100%;
+    height: 0;
+    background: rgb(172, 125, 125);   /*-------modifiy------*/
+    padding: 0;
+    position: absolute;         /*das Element wird relativ zu seinem ersten positionierten Elternteil positioniert*/
+    bottom: 0.3px;
+    left: 0;
+    transform: inherit;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;       /*keine Anzeoge bei überschreitung der Abmessungen*/
+}
+.dat p{
+    margin: 10px auto;
+}
+.dat strong{
+    display: inline-block;
+    width: 100%;
+}
+.dat p:first-child strong{
+    width: 75%;
+    margin: 0;
+}
+.dat p{
+    padding: 0;
+}
+.price{
+    font-size: 10px;        /*-------modifiy------*/
+    font-weight: bold;
+}
+.in span{
+    width: 15px;        /*-------modifiy------*/
+    height: 15px;    /*-------modifiy------*/
+    line-height: 15px;      /*-------modifiy------*/
+    border-radius: 50%;
+    background: white;
+    border: 1px solid gray;
+    display: inline-block;
+    text-align: center;
+    margin: 0 3px;      /*-------modifiy------*/
+}
+.in span.active{
+    background: gray;
+    color: white;
+}
+.in:nth-of-type(2n) span{
+    background: #55299D;
+    border: 2px solid #ccc;
+}
+.in:nth-of-type(2n) span:first-child {
+    background: #0097d6;
+}
+.in:nth-of-type(2n) span:last-child {
+    background: #f04271;
+}
+.dat button{
+    border: none;
+    outline: none;
+    padding: 1px;      /*-------modifiy------*/
+    background: #00b0c4;
+    margin: 0 1px;            /*-------modifiy------*/
+    color: white;
+    cursor: pointer;
+    font-size: 10px;            /*-------modifiy------*/
+}
+button.add{
+    background: #f04271;
+}
+/*js file css*/
+.image-carior{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    width: 100%;
+    height: 300px;
+    border-radius: inherit;
+    display: none;
+}
+.image-carior.active{
+    display: block;
+    z-index: 5;             /*indicesPosition, stellt sie über die anderen Elemente*/
+}
+.item:nth-child(1) .image-carior.active{
+    animation: first 0.5s ease-in;          /*die Dauer der Animation(0.5); Beschleunigungskurve(ease-in) animation begin langsam und beschleugnig am ende */
+}
+.item:nth-child(2) .image-carior.active {           /*2n and 2n+1 angenommen MobileFirst*/
+    animation: second 0.5s ease-in;
+}
+.item:nth-child(3) .image-carior.active {
+    animation: third 0.5s ease-in;
+}
+.item:nth-child(4) .image-carior.active {
+    animation: four 0.5s ease-in;
+}
+.item:nth-child(5) .image-carior.active {
+    animation: first 0.5s ease-in;
+}
+.item:nth-child(6) .image-carior.active {
+    animation: second 0.5s ease-in;
+}
+@keyframes first{
+    to{
+        transform: scale(0.08);
+        top: -305px;
+        left: 925px;
+    }
+}
+@keyframes second {
+    to {
+        transform: scale(0.08);
+        top: -305px;
+        left: 605px;
+    }
+}
+@keyframes third {
+    to {
+        transform: scale(0.08);
+        top: -305px;
+        left: 277px;
+    }
+}
+@keyframes four {
+    to {
+        transform: scale(0.08);
+        top: -305px;
+        left: -45px;
+    }
+}
 
 
-
-
-
+.cart-field{
+    width: 90%;
+    height: 700px;
+    background: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    position: absolute;
+    top: -700px;
+    left: 5%;
+    transition:0.5;
+}
+.cart-field.display{ /*Element der cart anzeigen lassen*/
+    top: 90px;
+}
+.cart-field .item,
+.cart-field .item:hover{
+    width: 96%;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px auto;
+}
+.cart-field .item img,
+.cart-field .item:hover img{
+    transform: scale(1);
+    width: 30%;
+}
+ .cart-field .item .dat{
+    width: 60%;
+    position: relative;
+    height: 100%;
+    padding: 30px;
+    left: auto;
+    background: inherit;
+ }
+.cart-field .dat strong,
+.cart-field .dat .price{
+    font-size: 30px;
+}
+.cart-field .dat p:first-child strong{
+    width: 85%;
+}
+.cart-field .dat p small{
+    font-size: 20px;
+}
+.cart-field .in span{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+}
+.cart-field .image-carior.active{
+    display: none;
+}
+/*----------------------------Ende der style aniprodukt---------------------------------------------------*/
 
 @keyframes defilementImages{
     0%{
@@ -415,6 +858,27 @@ section{
     }
 }
 
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 3;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 3;
+        transform: translateX(0px);
+    }
+}
 
 
 
@@ -433,8 +897,6 @@ section{
         /* margin-left: -90px; */
         padding: 2.0rem 2.6rem;
         visibility: visible;
-        
-        
     }
     .search .button_reset_search{
         border-width: 1px 0px 1px 1px;
@@ -456,6 +918,36 @@ section{
     body{
         min-width: 540px;
     }
+
+    /*----MediaQuery----responsivität der aniprodukt---------------------*/
+    main .item{
+        
+        height: 500px;
+    }
+    main .item:hover{
+        height: 500px;
+    }
+    .item:hover .dat{
+        height: 220px;
+    }
+    .dat .in span{
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        margin: 0 8px;
+    }
+    .dat button{
+        font-size: 15px;
+        padding: 1px 5px;
+    }
+    .dat p:first-child {
+        font-size: 15px;
+    }
+    .price{
+        font-size:23px;
+    }
+
+
 }
 
 @media (min-width:820px){
@@ -536,6 +1028,53 @@ section{
         margin-top: 0px;
         visibility: hidden;
     }
+
+    /*--------------Query About Us------------*/
+
+        .heading h1 {
+            font-size: 55px;
+            margin-top: 35px;
+        }
+    
+        .hero {
+            overflow: hidden;
+        }
+    
+        .container {
+            width: 90%;
+            margin: 65px auto;
+        }
+    
+        .hero-content {
+            width: 100%;
+            margin: 35px 0px;
+        }
+    
+        .hero-content h2 {
+            font-size: 38px;
+    
+        }
+    
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+    
+        .hero-content button {
+            font-size: 20px;
+            padding: 12px 24px;
+        }
+    
+        .hero-image {
+            flex: 1;
+            width: 600px;
+            animation: fadeInRight 2s ease;
+        }
+
+        /*-----MediaQuery---- aniprodukt---------*/
+       main .item{
+            min-width: 30%;
+        }
 }
 
 
@@ -613,6 +1152,19 @@ section{
         margin-top: 7px;
         visibility: visible;
     }
+
+        /*-----MediaQuery---- aniprodukt---------*/
+        .item{
+            min-width: 20%;
+        }
+        .item:hover .dat{
+            height: 230px;
+        }
+        .in span{
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+        }
 }
 
 @media (min-width:1000px){
@@ -638,6 +1190,8 @@ section{
     .class{
         margin-right: 65px;
     }
+        /*-----MediaQuery---- aniprodukt---------*/
+        
 }
 
 
