@@ -17,7 +17,7 @@ function closeMenu(){
     sidemenu.style.right = "-200px";
 }
 
-//spcrip der site aniprodukt
+//spcrip der site aniprodukt--------------------------------------------------------
 let cart = document.querySelector(".cart");
 let cartfield = document.querySelector(".cart-field");
 let add = document.getElementsByClassName('add');
@@ -25,8 +25,8 @@ let add = document.getElementsByClassName('add');
 
 for (let but of add) {
     but.onclick = e => {
-        let item = Number(cart.getAttribute('data-count') || 0);
-        cart.setAttribute('data-count', item + 1);
+        let item = Number(cart.getAttribute('data-count') || 0); //wenn kein wert definiert ist, wird null zugewiesen
+        cart.setAttribute('data-count', item + 1);          // update attribute
         cart.classList.add('on');
 
         //image animated to cart
