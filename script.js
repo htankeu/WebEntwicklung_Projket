@@ -1,5 +1,10 @@
 // Javascript Teil unserer Aufgabe
-let saw = 0
+let heartIcon = document.getElementsByClassName('heart-icon');
+
+for (let i = 0; i < heartIcon.length; i++) {
+    heartIcon[i].addEventListener('click', function () { // agiert auf die elemente mit gleichem KlasseName
+        heartIcon[i].classList.toggle('clicked');
+    })};
 
 // operationen um die MenuListe anzuzeigen und zu closeMenu, beim kleinen Dimensionen
 const sidemenu = document.getElementById("sideMenu")
@@ -12,59 +17,47 @@ function closeMenu(){
     sidemenu.style.right = "-200px";
 }
 
-
-// script to frage
-const chevrons = document.getElementsByClassName('icon-chevron')    //all icon chevron in each Div
-
-
-const configDiv = document.querySelector('.config')
-const divAnswerConfig = document.querySelector('.textvon')
-const answeConfig = divAnswerConfig.getElementsByTagName('p')
-
-const bestSelDiv = document.querySelector('.best')
-const divImageBest = document.querySelector('.BestSeller')
-
-const materialDiv = document.querySelector('.Material')
-const divImageMaterial = document.querySelector('.Materiallen')
+//spcrip der site aniprodukt--------------------------------------------------------
+let cart = document.querySelector(".cart");
+let cartfield = document.querySelector(".cart-field");
+let add = document.getElementsByClassName('add');
 
 
+for (let but of add) {
+    but.onclick = e => {
+        let item = Number(cart.getAttribute('data-count') || 0); //wenn kein wert definiert ist, wird null zugewiesen
+        cart.setAttribute('data-count', item + 1);          // update attribute
+        cart.classList.add('on');
 
-configDiv.addEventListener('click',()=>{
-    pulldownFrage(divAnswerConfig,configDiv)
-})
+        //image animated to cart
+        let parent = e.target.parentNode.parentNode.parentNode;
+        let image = parent.querySelector('img');
+        let span = document.createElement('span');
+        span.className = 'image-carior';
+        parent.insertBefore(span, parent.lastElementChild);
+        
+        let s_image = image.cloneNode(false);
+        span.appendChild(s_image);
+        span.classList.add('active');
+        setTimeout(() => {
+            span.classList.remove('active');
+            span.removeChild(s_image);
+        }, 500);
 
-bestSelDiv.addEventListener('click',()=>{
-    pulldownFrage(divImageBest,bestSelDiv)
-})
+        //copy and paste
 
-materialDiv.addEventListener('click',()=>{
-    pulldownFrage(divImageMaterial,materialDiv)
-})
+        let clone = parent.cloneNode(true);
+        clone.querySelector('.add').style.display = 'none';
+        clone.querySelector('.add').removeAttribute('class');
+        cartfield.appendChild(clone);
 
-
-
-// function to drop-down the question auf der Home 
-function pulldownFrage (place,parent){
-    place.style.height = "0px"
-    let chevron
-
-    if(istChild(place,answeConfig[0])) answeConfig[0].style.visibility = "hidden"
-
-    for(elem of chevrons){
-        if(istChild(parent,elem)) chevron = elem
+        if (clone) {
+            cart.onclick = () => {
+                cartfield.classList.toggle('display')
+            }
+        }
     }
-
-    chevron.style.transform = "rotate(0deg)"
-
-    if(saw %2 == 0){
-        place.style.height = "150px"
-        
-        
-        if(istChild(place,answeConfig[0])) answeConfig[0].style.visibility = "visible"
-
-        chevron.style.transform = "rotate(180deg)"
-        
-    }
+<<<<<<< HEAD
     saw+=1
 }
 
@@ -172,3 +165,6 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 });
 
 
+=======
+}
+>>>>>>> 4bcd48cfdc69f5f1c789564c8d633c78ed14c13a
