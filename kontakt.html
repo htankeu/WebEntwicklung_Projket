@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="Worms, worms, webDev, Informatik, Projekt, Studium, Football, Footkick, Kits">
-    <meta name="description" content="Projekt webDev, Pick and Build, FootKick von KIts, Kits building">
     <title>Home</title>
-    <link rel="shortcut icon" href="images/soocer-removebg-preview.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap-apis für die Nutzung von Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -74,168 +71,106 @@
     </header>
     <!-- fin header -->
 
-
-
-    <!-- Anfang Inhalt-->
-    <!-- section von Home -->
-    <section id="home">
-        <div class="ganz_werbung">
-            <div class="left_werbung"></div>
-            <div class="werbung">
-                <p>Ein paar Kits von <span>FOOTKick</span></p>
+    <!--   Start Inhalt Seite Kontakt-->
+    <div class="wrapcontact">
+      <div class="contact-left">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">Irgendwo, 15</div>
+            <div class="text-two">1234 frankfurt</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+0049 6145 12345</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">help@buildhouse.com</div>
+          </div> 
+      </div>
+      
+       <div class="contact-right">
+          <div class="contact-container">  
+            <form action="" class="contact">
+                <h3>FOOTKick Contact Form</h3>
+                <h4>Contact us for any inquiry</h4>
+                <fieldset>
+                    <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                  </fieldset>
+                  <fieldset>
+                    <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                  </fieldset>
+                  <fieldset>
+                    <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                  </fieldset>
+                  <fieldset>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                  </fieldset>
+            </form>
+                 <!--<form  action="" method="post">
+                    <h3>FOOTKick Contact Form</h3>
+                    <h4>Contact us for any inquiry</h4>
+                    <fieldset>
+                      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+                    </fieldset>
+                    <fieldset>
+                      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+                    </fieldset>
+                    <fieldset>
+                      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+                    </fieldset>
+                    <fieldset>
+                      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                    </fieldset>
+                </form>--> 
             </div>
-        </div>
-        <div class="beschreib">
-            <div class="left">
-                <h1>With FOOT<span>Kick</span> Build your own Football Kits</h1>
-                <p>Würdest du deine selbst gestalten Fußball Kits? Dann bist du auf dem richtigen Ort </p>
-                <p>Gestalte eine Minikits für 10$. Die Lieferkosten sind inklusive. Für mehrere Services können Sie weitere Pages besuchen</p>
-                <p>Unten können Sie loslegen. Wählen Sie einfach, was Ihnen gefällt.</p>
-            </div>
-            <div class="right">
-                <!-- <img src="https://www.free-mockup.com/wp-content/uploads/edd/2022/05/Football-Kit-PSD-Free-Mockup.jpg" alt="kits" title="foot Kits"> -->
-            </div>
-        </div>
-        
-    </section>
+       </div> 
 
-
-    <!-- Bau section -->
-    <section id="build">
-        <h1 class="section_title">Build your Kits</h1>
-
-        <div class="bau mittel">
-            <figure>
-                <img src="images/football-jersey (1).png" alt="i">
-                <div class="neu bauen">
-                    <figcaption>Jetzt bauen</figcaption>
-                    <div class="add icon">
-                        <a href="#popup"><i class="fa-solid fa-plus" id="top"></i></a>
-                    </div>
-                </div>
-            </figure>
-
-            <figure>
-                <img src="images/short.png" alt="i" >
-                <div class="neu bauen">
-                    <figcaption>Jetzt bauen</figcaption>
-                    <div class="add icon">
-                        <a href="#popup"><i class="fa-solid fa-plus" id="short"></i></a>
-                    </div>
-                </div>
-            </figure>
-
-            <figure>
-                <img src="images/socks.png" alt="i" >
-                <div class="neu bauen">
-                    <figcaption>Jetzt bauen</figcaption>
-                    <div class="add icon">
-                        <a href="#popup"><i class="fa-solid fa-plus" id="socket"></i></a>
-                    </div>
-                </div>
-            </figure>
-
-        </div>
-    </section>
-
-
-    <!-- section für gute fragen -->
-    <section id="Fragen">
-
-        <h1 class="section_title">Wichtige Fragen</h1>
-
-        <div class="config">
-            <div class="fragen configuration">
-                <span>Muss man unbedingt alle Teile von Kits wählen, bevor kaufen zu können?</span>
-                <span class="icon-chevron"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-
-            <div class="textvon configAntwort">
-                <p>Ja!  Natürlich Sie müssen alle Teile auswählen, bevor zu kaufen. Damit Sie ein gesamtes Produkt bekommen könnten. Fertige Produkte verkaufen wir leider nicht. Aber keine Sorge auf die Qualität :-D</p>
-            </div>
-
-            <div class="ligne"></div>
-        </div>
-
-
-        <div class="best">
-            <div class="fragen bestSeller">
-                <span>Was sind eure Bestseller?</span>
-                <span class="icon-chevron"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-
-            <div class="imagesvon BestSeller">
-                <img src="https://images.footballfanatics.com/england-national-team/england-home-stadium-shirt-2022_ss4_p-13303881+u-1gyv3sga3i4yes32a18g+v-c41b4662f82b4e9fb719dc4793ef9813.jpg?_hv=2&w=340" alt="img1">
-            </div>
-            <div class="ligne"></div>
-        </div>
-
-
-        <div class="Material">
-            <div class="fragen material">
-                <span>Was sind eure Materiallen</span>
-                <span class="icon-chevron"><i class="fa-solid fa-chevron-down"></i></span>
-            </div>
-
-            <div class="imagesvon Materiallen">
-                <img src="https://i5.walmartimages.com/asr/6e684c6d-3694-4aaf-908e-acb470c1e412_1.6d1ef9b903a05c14a5c161cd0eb4b74c.jpeg?odnWidth=612&odnHeight=612&odnBg=ffffff" alt="imgMaterial">
-            </div>
-        </div>
-        
-    </section>
-
-    <section id="bestellungen_zahl">
-        <div class="box">
-            <div class="circlebox"></div>
-            <p>Wir haben schon <span class="anzahl_be">1000</span> Bestellungen gehabt!!</p>
-            
-        </div>
-    </section>
-
-    
-    <!-- section of page to build -->
-    <section id="popup" class="overlay">
-        <div class="popup">
-          <a href="#" class="cross"><i class="fa-solid fa-xmark"></i></a>
-          
-          <div class="left_build">
-            <video autoplay muted loop id="videoBack">
-                <source src="https://cdn.pixabay.com/vimeo/724719819/faser-121805.mp4?width=1280&hash=7926ff15d5b8fd296695a7d29768b47caf7ad5e0" type="video/mp4">
-            </video>
-
-            <div class="combinaison">
-                <img src="images/top/rTop-removebg-preview.png" id="ktop" alt="t-shirt Kits">
-                <img src="images/short/blshort-removebg-preview.png" id="kshort" alt="short kits">
-                <img src="images/sockets/blsock1.png" id="kscokets" alt="sockets Kits">
+    </div>
+    <div class="row">
+        <div class="col-about">
+          <div class="card-team">
+            <img src="./images/cedric.png" alt="Joresse" style="width:100%">
+            <div class="container-team">
+              <h2>Joel Matip </h2>
+              <p class="title-team">Kunde VIP</p>
+              <p><button class="button-team">Contact</button></p>
             </div>
           </div>
-
-
-          <div class="right_build">
-            <nav class="colors">
-                <ul>
-                    <li id="red">Red</li>
-                    <li id="blue">Blue</li>
-                    <li id="black">Black</li>
-                    <li id="white">White</li>
-                </ul>
-            </nav>
-            
-            
-            <div class="seeElems"></div>
-
-          </div>
-    
         </div>
+        <div class="col-about">
+          <div class="card-team">
+            <img src="./images/cedric.png" alt="Joel" style="width:100%">
+            <div class="container-team">
+              <h2>Cedric Nenkam</h2>
+              <p class="title-team">Reklamation Problem </p>
+              <p><button class="button-team">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-about">
+          <div class="card-team">
+            <img src="./images/cedric.png" alt="cedric" style="width:100%">
+            <div class="container-team">
+              <h2>Joresse Müller</h2>
+              <p class="title-team">Techniche Probleme</p>
+              <p><button class="button-team">Contact</button></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- Ende Inhalt Kontakt Seite-->
 
-    </section>
     
-
-
-
-
-
-
     <!-- footer -->
     <footer>
         <!-- obere row -->
@@ -346,5 +281,5 @@
     </footer>
     
 </body>
-<script src="script.js" async></script>
+<script src="script.js"></script>
 </html>
